@@ -7,6 +7,7 @@ import Container from './components/Container'
 
 import { createStore } from 'redux'
 import rootReducer from './reducers'
+import { Provider } from 'react-redux'
 
 const store = createStore(
   rootReducer,
@@ -14,5 +15,10 @@ const store = createStore(
 )
 
 
-ReactDOM.render(<Container />, document.getElementById('root'));
+ReactDOM.render(
+  <Provider store={store}>
+    <Container/>
+  </Provider>,
+  document.getElementById('root')
+);
 registerServiceWorker();

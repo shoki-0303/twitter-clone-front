@@ -1,5 +1,5 @@
 import React from 'react'
-import MainContent from './MainContent'
+import MainContent from '../Conteiners/MainContent'
 import SubContent from './SubContent'
 
 class Content extends React.Component {
