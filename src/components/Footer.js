@@ -1,19 +1,19 @@
 import React from 'react';
 import styled from 'styled-components'
 
-const Content = styled.header`
+const Content = styled.footer`
   height: 80px;
   background-color: gray;
 `
 
-class Header extends React.Component{
+class Footer extends React.Component{
   render() {
     return(
       <Content>
-        header content
+        footer content
       </Content>
     );
   }
 }
 
-export default Header
+export default Footer
