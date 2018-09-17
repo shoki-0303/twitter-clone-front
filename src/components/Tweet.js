@@ -8,6 +8,7 @@ const Cell = styled.a`
   border: solid 1px #03a9f469;
   padding: 10px 10px;
   max-width: 350px;
+  box-shadow: 0px 3px 15px rgba(0,0,0,0.2);
   &:hover {
     cursor: pointer;
   }
