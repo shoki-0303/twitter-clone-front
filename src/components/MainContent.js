@@ -4,6 +4,9 @@ import Tweet from './Tweet'
 
 const Content = styled.div`
   padding: 0 15px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
 `
 
 class MainContent extends React.Component {
@@ -13,7 +16,6 @@ class MainContent extends React.Component {
   }
   render() {
     const { tweets } = this.props
-    console.log(tweets)
     return (
       <Content>
         {tweets.map((tweet, key)=>{
