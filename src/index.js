@@ -5,13 +5,17 @@ import './reset.css'
 
 import Container from './components/Container'
 
-import { createStore } from 'redux'
+import { createStore, applyMiddleware } from 'redux'
+import { composeWithDevTools } from 'redux-devtools-extension';
+import thunk from 'redux-thunk'
 import rootReducer from './reducers'
 import { Provider } from 'react-redux'
 
 const store = createStore(
   rootReducer,
-  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+  composeWithDevTools(
+    applyMiddleware(thunk)
+  )
 )
 
 

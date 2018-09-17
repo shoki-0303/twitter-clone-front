@@ -1,4 +1,6 @@
 import { connect } from 'react-redux'
+import { bindActionCreators } from 'redux'
+import * as TweetsActions from '../actions/TweetsActions'
 import MainContent from '../components/MainContent'
 
 const mapStateToProps = state => {
@@ -7,4 +9,13 @@ const mapStateToProps = state => {
   }
 }
 
-export default connect(mapStateToProps, null)(MainContent)
+const mapDispatchToProps = dispatch => {
+  return {
+    tweetAction: bindActionCreators(TweetsActions, dispatch)
+  }
+}
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(MainContent)
