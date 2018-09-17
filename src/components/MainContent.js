@@ -1,4 +1,10 @@
 import React from 'react'
+import styled from 'styled-components'
+import Tweet from './Tweet'
+
+const Content = styled.div`
+  padding: 0 15px;
+`
 
 class MainContent extends React.Component {
   constructor(props) {
@@ -6,8 +12,16 @@ class MainContent extends React.Component {
     props.tweetAction.fetchTweets()
   }
   render() {
+    const { tweets } = this.props
+    console.log(tweets)
     return (
-      <div>Main Content</div>
+      <Content>
+        {tweets.map((tweet, key)=>{
+          return(
+            <Tweet tweet={tweet} key={key}/>
+          );
+        })}
+      </Content>
     );
   }
 }
