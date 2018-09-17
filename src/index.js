@@ -1,8 +1,28 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
 import registerServiceWorker from './registerServiceWorker';
+import './reset.css'
 
-ReactDOM.render(<App />, document.getElementById('root'));
+import Container from './components/Container'
+
+import { createStore, applyMiddleware } from 'redux'
+import { composeWithDevTools } from 'redux-devtools-extension';
+import thunk from 'redux-thunk'
+import rootReducer from './reducers'
+import { Provider } from 'react-redux'
+
+const store = createStore(
+  rootReducer,
+  composeWithDevTools(
+    applyMiddleware(thunk)
+  )
+)
+
+
+ReactDOM.render(
+  <Provider store={store}>
+    <Container/>
+  </Provider>,
+  document.getElementById('root')
+);
 registerServiceWorker();
