@@ -11,6 +11,8 @@ const Wrapper = styled.div`
   overflow-y: scroll;
   z-index: 10000;
   background-color: #f2f2f2;
+  &::-webkit-scrollbar {
+    display: none;
   }
 `
 
