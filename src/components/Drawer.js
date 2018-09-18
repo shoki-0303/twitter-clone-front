@@ -1,5 +1,5 @@
 import React from 'react'
-import styled, { css } from 'styled-components'
+import styled from 'styled-components'
 
 const Wrapper = styled.div`
   position: fixed;
@@ -11,20 +11,6 @@ const Wrapper = styled.div`
   overflow-y: scroll;
   z-index: 10000;
   background-color: #f2f2f2;
-
-  -webkit-transition: all 0.15s ease-in;
-  -moz-transition: all 0.15s ease-in;
-  -o-transition: all 0.15s ease-in;
-  transition: all 0.15s ease-in;
-
-  ${(props) => 
-    props.isOpenDrawer &&
-    css`
-      -webkit-transform: translate3d(150px, 0, 0);
-      -moz-transform: translate3d(150px, 0, 0);
-      transform: translate3d(150px, 0, 0);
-      box-shadow: rgba(0, 0, 0, 0.12) -2px 0px 4px;    
-    `
   }
 `
 
