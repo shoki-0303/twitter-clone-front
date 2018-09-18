@@ -23,16 +23,13 @@ const Line = styled.div`
   margin: 5px 12px;
 `
 
-class HamburgerMenu extends React.Component {
-  render() {
-    return(
-      <Content>
-        <Line/>
-        <Line/>
-        <Line/>
-      </Content>
-    );
-  }
-}
+const HamburgerMenu = ({openDrawer}) => (
+  <Content onClick={()=>{openDrawer()}}>
+    <Line/>
+    <Line/>
+    <Line/>
+  </Content>
+)
+
 
 export default HamburgerMenu

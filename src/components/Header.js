@@ -18,9 +18,10 @@ const Logo = styled.div`
 
 class Header extends React.Component{
   render() {
+    const {openDrawer, closeDrawer} = this.props.CommonActions
     return(
       <Content>
-        <HamburgerMenu />
+        <HamburgerMenu openDrawer={openDrawer}/>
         <Logo logo={logo}/>
       </Content>
     );
