@@ -11,12 +11,12 @@ const DrawerWrapper = styled.div`
   -moz-transition: all 0.15s ease-in;
   -o-transition: all 0.15s ease-in;
   transition: all 0.15s ease-in;
-  
+
   ${(props)=>
     props.isOpenDrawer && css`
-      -webkit-transform: translate3d(150px, 0, 0);
-      -moz-transform: translate3d(150px, 0, 0);
-      transform: translate3d(150px, 0, 0);
+      -webkit-transform: translate3d(240px, 0, 0);
+      -moz-transform: translate3d(240px, 0, 0);
+      transform: translate3d(240px, 0, 0);
       box-shadow: rgba(0, 0, 0, 0.12) -2px 0px 4px;
     `
   }
