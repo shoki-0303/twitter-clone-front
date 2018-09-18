@@ -1,5 +1,7 @@
 import { connect } from 'react-redux'
 import Content from '../components/Content'
+import * as CommonActions from '../actions/CommonActions'
+import { bindActionCreators } from 'redux'
 
 const mapStateToProps = state => {
   return {
@@ -7,4 +9,10 @@ const mapStateToProps = state => {
   }
 }
 
-export default connect(mapStateToProps, null)(Content)
+const mapDispatchToProps = dispatch => {
+  return {
+    CommonActions: bindActionCreators(CommonActions, dispatch)
+  }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Content)

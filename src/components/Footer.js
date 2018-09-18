@@ -15,8 +15,9 @@ const Content = styled.footer`
 class Footer extends React.Component{
   render() {
     const { isOpenDrawer } = this.props.common
+    const { closeDrawer } = this.props.CommonActions
     return(
-      <Content isOpenDrawer={isOpenDrawer}>
+      <Content isOpenDrawer={isOpenDrawer} onClick={()=>{isOpenDrawer && closeDrawer()}}>
         footer content
       </Content>
     );

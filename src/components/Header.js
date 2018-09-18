@@ -26,9 +26,8 @@ class Header extends React.Component{
   render() {
     const {isOpenDrawer} = this.props.common
     const {openDrawer, closeDrawer} = this.props.CommonActions
-    console.log(isOpenDrawer)
     return(
-      <Content isOpenDrawer={isOpenDrawer}>
+      <Content isOpenDrawer={isOpenDrawer} onClick={()=>{isOpenDrawer && closeDrawer()}}>
         <HamburgerMenu openDrawer={openDrawer}/>
         <Logo logo={logo}/>
       </Content>

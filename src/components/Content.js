@@ -15,8 +15,9 @@ const Wrapper = styled.div`
 class Content extends React.Component {
   render() {
     const { isOpenDrawer } = this.props.common
+    const { closeDrawer } = this.props.CommonActions
     return (
-      <Wrapper isOpenDrawer={isOpenDrawer}>
+      <Wrapper isOpenDrawer={isOpenDrawer} onClick={()=>{isOpenDrawer && closeDrawer()}}>
         <MainContent/>
         <SubContent/>
       </Wrapper>
