@@ -3,7 +3,7 @@ import React from 'react';
 import Drawer from '../Conteiners/Drawer'
 import Header from '../Conteiners/Header'
 import Footer from './Footer'
-import Content from './Content'
+import Content from '../Conteiners/Content'
 
 class Container extends React.Component {
   render() {

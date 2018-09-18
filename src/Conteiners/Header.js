@@ -3,10 +3,16 @@ import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import * as CommonActions from '../actions/CommonActions'
 
+const mapStateToProps = state => {
+  return {
+    common: state.common
+  }
+}
+
 const mapDispatchToProps = dispatch => {
   return {
     CommonActions: bindActionCreators(CommonActions, dispatch)
   }
 }
 
-export default connect(null, mapDispatchToProps)(Header)
+export default connect(mapStateToProps, mapDispatchToProps)(Header)

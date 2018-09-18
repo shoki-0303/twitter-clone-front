@@ -1,5 +1,5 @@
 import React from 'react';
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 import HamburgerMenu from './HamburgerMenu'
 import logo from '../images/logo.png'
 
@@ -7,6 +7,11 @@ const Content = styled.header`
   padding: 10px 0;
   border-bottom: 1px solid #80808047;
   position: relative;
+  ${(props)=>
+    props.isOpenDrawer && css`
+      opacity: 0.3;
+    `
+  }
 `
 const Logo = styled.div`
   display: block;
@@ -18,9 +23,10 @@ const Logo = styled.div`
 
 class Header extends React.Component{
   render() {
+    const {isOpenDrawer} = this.props.common
     const {openDrawer, closeDrawer} = this.props.CommonActions
     return(
-      <Content>
+      <Content isOpenDrawer={isOpenDrawer}>
         <HamburgerMenu openDrawer={openDrawer}/>
         <Logo logo={logo}/>
       </Content>
