@@ -1,6 +1,6 @@
 import React from 'react'
 import TweetsPage from '../Conteiners/TweetsPage'
-import TweetPage from '../pages/TweetPage'
+import TweetPage from '../Conteiners/TweetPage'
 import { BrowserRouter, Route, Switch } from 'react-router-dom'
 
 class MainContent extends React.Component {
