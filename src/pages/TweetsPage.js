@@ -12,7 +12,6 @@ const Content = styled.div`
 
 class TweetsPage extends React.Component {
   componentWillMount() {
-    console.log(this.props)
     this.props.tweetAction.fetchTweets()
   }
   render() {
