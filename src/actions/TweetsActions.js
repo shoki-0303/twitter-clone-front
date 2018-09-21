@@ -7,7 +7,7 @@ export const fetchTweets = () => {
       dispatch({
         type: 'FETCH_TWEETS',
         payload: {
-          tweets: response.data
+          entities: response.data
         }
       })
     })

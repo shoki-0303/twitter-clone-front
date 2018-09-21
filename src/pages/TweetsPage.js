@@ -11,16 +11,15 @@ const Content = styled.div`
 `
 
 class TweetsPage extends React.Component {
-  constructor(props) {
-    super(props)
-    props.tweetAction.fetchTweets()
+  componentWillMount() {
+    console.log(this.props)
+    this.props.tweetAction.fetchTweets()
   }
   render() {
-    const { tweets } = this.props
-    console.log(this.props.tweets)
+    const { entities } = this.props.tweets
     return (
       <Content>
-        {tweets.map((tweet, key)=>{
+        {entities && entities.map((tweet, key)=>{
           return(
             <Link key={key} to={`/tweets/${tweet.id}`} style={{ textDecoration: 'none', color: 'black' }}>
                 <Tweet tweet={tweet}/>
