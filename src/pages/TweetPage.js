@@ -32,19 +32,18 @@ const Description = styled.p`
 `
 
 class TweetPage extends React.Component {
-  constructor(props) {
-    super(props)
-    const id = props.match.params.id
+  componentWillMount() {
+    const id = this.props.match.params.id
     this.props.tweetsAction.fetchTweet(id)
   }
   render() {
-    const { title, image, body } = this.props.tweet
+    const { tweet } = this.props.tweets
     return (
       <Cell>
-        <Title>{title}</Title>
+        <Title>{tweet.title}</Title>
         <Category>fashion</Category>
-        <Image imageUrl={image}/>
-        <Description>{body}</Description>
+        <Image imageUrl={tweet.image}/>
+        <Description>{tweet.body}</Description>
       </Cell>
     );
   }

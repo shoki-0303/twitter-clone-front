@@ -5,7 +5,7 @@ import * as TweetsActions from '../actions/TweetsActions'
 
 const mapStateToProps = state => {
   return {
-    tweet: state.tweets
+    tweets: state.tweets
   }
 }
 
