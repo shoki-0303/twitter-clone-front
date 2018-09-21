@@ -26,5 +26,6 @@ export const fetchTweet = (id) => {
         }
       })
     })
+    .catch((e)=>{console.log(e)})
   }
 }
