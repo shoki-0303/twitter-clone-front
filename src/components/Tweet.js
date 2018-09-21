@@ -5,7 +5,7 @@ const Cell = styled.div`
   display: block;
   text-decoration: none;
   margin-top: 15px;
-  border: solid 1px #03a9f469;
+  border: solid 1px #e46aabcc;
   padding: 10px 10px;
   max-width: 350px;
   box-shadow: 0px 3px 15px rgba(0,0,0,0.2);
