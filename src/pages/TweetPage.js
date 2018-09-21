@@ -38,7 +38,6 @@ class TweetPage extends React.Component {
     this.props.tweetsAction.fetchTweet(id)
   }
   render() {
-    console.log(this.props)
     const { title, image, body } = this.props.tweet
     return (
       <Cell>

@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 
-const Cell = styled.a`
+const Cell = styled.div`
   display: block;
   text-decoration: none;
   margin-top: 15px;
