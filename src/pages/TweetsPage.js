@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import Tweet from '../components/Tweet'
+import { Link } from 'react-router-dom'
 
 const Content = styled.div`
   padding: 0 15px;
@@ -10,17 +11,18 @@ const Content = styled.div`
 `
 
 class TweetsPage extends React.Component {
-  constructor(props) {
-    super(props)
-    props.tweetAction.fetchTweets()
+  componentWillMount() {
+    this.props.tweetAction.fetchTweets()
   }
   render() {
-    const { tweets } = this.props
+    const { entities } = this.props.tweets
     return (
       <Content>
-        {tweets.map((tweet, key)=>{
+        {entities && entities.map((tweet, key)=>{
           return(
-            <Tweet tweet={tweet} key={key}/>
+            <Link key={key} to={`/tweets/${tweet.id}`} style={{ textDecoration: 'none', color: 'black' }}>
+                <Tweet tweet={tweet}/>
+            </Link>
           );
         })}
       </Content>
