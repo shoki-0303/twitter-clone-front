@@ -1,31 +1,21 @@
 import React from 'react'
-import styled from 'styled-components'
-import Tweet from './Tweet'
-
-const Content = styled.div`
-  padding: 0 15px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-`
+import TweetsPage from '../Conteiners/TweetsPage'
+import TweetPage from '../pages/TweetPage'
+import { BrowserRouter, Route, Switch } from 'react-router-dom'
 
 class MainContent extends React.Component {
-  constructor(props) {
-    super(props)
-    props.tweetAction.fetchTweets()
-  }
   render() {
-    const { tweets } = this.props
     return (
-      <Content>
-        {tweets.map((tweet, key)=>{
-          return(
-            <Tweet tweet={tweet} key={key}/>
-          );
-        })}
-      </Content>
-    );
+      <BrowserRouter>
+        <Switch>
+          <Route exact path="/" component={TweetsPage}/>
+          <Route exact path="/tweets" component={TweetsPage}/>
+          <Route exact path="/tweets/:id" component={TweetPage}/>
+        </Switch>
+      </BrowserRouter>
+    )
   }
 }
+
 
 export default MainContent

@@ -1,5 +1,5 @@
 import React from 'react'
-import MainContent from '../Conteiners/MainContent'
+import MainContent from './MainContent'
 import SubContent from './SubContent'
 import styled, { css } from 'styled-components'
 
