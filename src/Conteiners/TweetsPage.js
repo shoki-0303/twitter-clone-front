@@ -1,7 +1,7 @@
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import * as TweetsActions from '../actions/TweetsActions'
-import MainContent from '../components/MainContent'
+import TweetsPage from '../pages/TweetsPage'
 
 const mapStateToProps = state => {
   return {
@@ -18,4 +18,4 @@ const mapDispatchToProps = dispatch => {
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(MainContent)
+)(TweetsPage)
