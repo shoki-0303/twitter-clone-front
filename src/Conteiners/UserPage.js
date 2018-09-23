@@ -9,4 +9,10 @@ const mapDispatchToprops = dispatch => {
   }
 }
 
-export default connect(null, mapDispatchToprops)(UserPage)
+const mapStateToProps = state => {
+  return {
+    user: state.user
+  }
+}
+
+export default connect(mapStateToProps, mapDispatchToprops)(UserPage)
