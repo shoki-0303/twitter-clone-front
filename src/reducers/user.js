@@ -1,12 +1,10 @@
 const initialState = {
-  entities: {
-    id: 0,
-    name: '',
-    email: '',
-    created_at: '',
-    updated_at: '',
-    password_digest: ''
-  }
+  id: 0,
+  name: '',
+  email: '',
+  created_at: '',
+  updated_at: '',
+  password_digest: ''
 }
 
 export const user = (state = initialState, action) => {

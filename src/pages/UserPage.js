@@ -6,6 +6,7 @@ class UserPage extends React.Component {
     this.props.userActions.fetchUser(id)
   }
   render() {
+    console.log(this.props.user)
     return(
       <div>UserPage</div>
     );

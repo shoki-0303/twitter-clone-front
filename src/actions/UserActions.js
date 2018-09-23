@@ -6,9 +6,7 @@ export const fetchUser = (id) => {
     .then((response)=>{
       dispatch({
         type: 'FETCH_USER',
-        payload: {
-          entities: response.data
-        }
+        payload: response.data
       })
     })
     .catch((e)=>{console.log(e)})
