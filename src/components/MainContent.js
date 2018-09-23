@@ -1,6 +1,7 @@
 import React from 'react'
 import TweetsPage from '../Conteiners/TweetsPage'
 import TweetPage from '../Conteiners/TweetPage'
+import UserPage from '../Conteiners/UserPage'
 import { BrowserRouter, Route, Switch } from 'react-router-dom'
 
 class MainContent extends React.Component {
@@ -11,6 +12,7 @@ class MainContent extends React.Component {
           <Route exact path="/" component={TweetsPage}/>
           <Route exact path="/tweets" component={TweetsPage}/>
           <Route exact path="/tweets/:id" component={TweetPage}/>
+          <Route exact path="/users/:id" component={UserPage} />
         </Switch>
       </BrowserRouter>
     )
