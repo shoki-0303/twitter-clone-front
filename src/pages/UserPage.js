@@ -1,4 +1,5 @@
 import React from 'react'
+import Error from '../components/Error'
 
 class UserPage extends React.Component {
   componentWillMount() {
@@ -6,9 +7,14 @@ class UserPage extends React.Component {
     this.props.userActions.fetchUser(id)
   }
   render() {
-    console.log(this.props.user)
+    const { user } = this.props
+    if (user.error.status === 404) {
+      return <Error statusCode={user.error.status}/>
+    }
     return(
-      <div>UserPage</div>
+      <div>
+        <div>UserPage</div>
+      </div>
     );
   }
 }

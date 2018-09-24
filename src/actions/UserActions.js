@@ -6,9 +6,18 @@ export const fetchUser = (id) => {
     .then((response)=>{
       dispatch({
         type: 'FETCH_USER',
-        payload: response.data
+        payload: {
+          current_user: response.data
+        }
       })
     })
-    .catch((e)=>{console.log(e)})
+    .catch((error)=>{
+      dispatch({
+        type: 'ERROR',
+        payload: {
+          error: error.response.data
+        }
+      })
+    })
   }
 }
