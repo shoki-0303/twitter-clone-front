@@ -5,6 +5,7 @@ import Drawer from '../Conteiners/Drawer'
 import Header from '../Conteiners/Header'
 import Footer from '../Conteiners/Footer'
 import Content from '../Conteiners/Content'
+import UserModal from '../Conteiners/UserModal'
 
 const DrawerWrapper = styled.div`
   -webkit-transition: all 0.15s ease-in;
@@ -27,6 +28,7 @@ class Container extends React.Component {
     const { isOpenDrawer } = this.props.common
     return(
       <DrawerWrapper isOpenDrawer={isOpenDrawer}>
+        <UserModal/>
         <Drawer/>
         <Header/>
         <Content/>

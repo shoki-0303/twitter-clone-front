@@ -49,8 +49,8 @@ class Drawer extends React.Component {
           <Title>User</Title>
           <Cell
             onClick={()=>{
-              commonActions.openModal()
               commonActions.closeDrawer()
+              commonActions.openModal()
             }}
           >
             Sign In
