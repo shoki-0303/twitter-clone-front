@@ -1,5 +1,6 @@
 const initialState = {
-  isOpenDrawer: false
+  isOpenDrawer: false,
+  isOpenModal: false
 }
 
 export const common = (state = initialState, action) => {
@@ -8,6 +9,10 @@ export const common = (state = initialState, action) => {
       return Object.assign({}, state, {isOpenDrawer: true});
     case 'closeDrawer':
       return Object.assign({}, state, {isOpenDrawer: false});
+    case 'openModal':
+      return Object.assign({}, state, {isOpenModal: true});
+    case 'closeModal':
+      return Object.assign({}, state, {isOpenModal: false});
     default:
       return state;
   }

@@ -42,11 +42,19 @@ const Cell = styled.li`
 class Drawer extends React.Component {
   render() {
     const {isOpenDrawer} = this.props.common
+    const {commonActions} = this.props
     return (
       <Wrapper isOpenDrawer={isOpenDrawer}>
         <UserContent>
           <Title>User</Title>
-          <Cell>Sign In</Cell>
+          <Cell
+            onClick={()=>{
+              commonActions.closeDrawer()
+              commonActions.openModal()
+            }}
+          >
+            Sign In
+          </Cell>
           <Cell>My page</Cell>
         </UserContent>
         <CategoryContent>

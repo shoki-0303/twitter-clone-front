@@ -1,6 +1,6 @@
 import { connect } from 'react-redux'
-import Drawer from '../components/Drawer'
-import { bindActionCreators } from 'redux'
+import UserModal from '../components/UserModal'
+import { bindActionCreators } from 'redux';
 import * as commonActions from '../actions/CommonActions'
 
 const mapStateToProps = state => {
@@ -8,11 +8,10 @@ const mapStateToProps = state => {
     common: state.common
   }
 }
-
 const mapDispatchToProps = dispatch => {
   return {
     commonActions: bindActionCreators(commonActions, dispatch)
   }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(Drawer)
+export default connect(mapStateToProps, mapDispatchToProps)(UserModal)
